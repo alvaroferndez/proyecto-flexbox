@@ -9,8 +9,8 @@ window.addEventListener("load", () => {
       abrir = true;
 
       //secciones
-      secciones_div = document.getElementById("secciones");
-      secciones = document.getElementsByTagName("section");
+      secciones_div = document.getElementById("contenedor-secciones");
+      secciones = document.getElementsByClassName("secciones");
 
       function abrirMenu(){
             lineas = document.getElementsByClassName("linea");
@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
 
       }
       
-      function manejoSecciones(e,i){
+      function manejoSecciones(e,i){      
             if (e.target.alt == secciones[i].id){
                   for (seccion of secciones){
                         seccion.style.display = "none";

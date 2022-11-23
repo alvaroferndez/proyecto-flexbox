@@ -1,26 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Nunito:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+/*fuentes*/
+h2{
+      font-family: 'Nunito', sans-serif;
+}
+
 /*body*/
 body{
       width: 100vw;
       height: 100%;
       font-family: 'Montserrat', sans-serif;
 }
-
-/*fuentes*/
-
-h2{
-      font-family: 'Nunito', sans-serif;
-}
-
-
-/*main*/
-main{
-      display: flex;
-      flex-direction: column-reverse;
-}
-
 
 /*header*/
 header{
@@ -108,13 +99,76 @@ li{
       transition: all 1.5s;
 }  
 
-/*seciones*/
-#secciones{
-      width: 90%;
-      height: 94vh;
+
+/*main*/
+main{
+      display: flex;
 }
 
-section{
+/*aside*/
+#contenedor-aside{
+      width: 5vw;
+      height: 100vh;
+      position: fixed;
+}
+
+/*flecha aside*/
+#flecha{
+      clip-path: circle();
+      width: 5vh;
+      height: 10vh;
+      margin-top: 47.5vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+      background-color: rgba(193, 193, 193, 0.411);
+}
+
+/*contenedor-linea-flecha*/
+#contenedor-linea-flecha{
+      width: 20px;
+      height: 10px;
+      margin-bottom: 2px;
+}
+
+/*linea flecha*/
+.linea-flecha{
+      z-index: 9;
+      width: 16px;
+      height: 5px;
+      margin-left: 20%;
+      background-color: black;
+}
+
+.linea-flecha:nth-child(1){
+      margin-bottom: 3px;
+      transform: rotate(40deg);
+}
+
+.linea-flecha:nth-child(2){
+      margin-top: 3px;
+      transform: rotate(-40deg);
+}
+
+
+/*aside contenido*/
+#aside-global{
+      position: absolute;
+      visibility: hidden;
+      width: 5vw;
+      height: 100vh;
+      z-index: 19;
+      background-color: black;
+}
+
+/*seciones*/
+#contenedor-secciones{
+      width: 90%;
+      height: 100vh;
+}
+
+.secciones{
       position: absolute;
       width: 100%;
       height: 94vh;
@@ -179,19 +233,19 @@ span{
 #contenedor-github{
       display: flex;
       align-items: center;
-      margin-top: 30%;
+      margin-top: 22%;
       background-color: white;
       width: 100%;
       height: 10%;
 }
 
 #github{
-      color: black;
-      margin-left: 10%;
-      font-size: 20px;
-      font-weight: 800;
-      text-decoration: none;
+      color:rgb(40, 44, 71);
+      margin-left: 8%;
+      font-size: 17px;
+      font-weight:900;
 }
+
 
 /*proyectos*/
 #proyectos{
@@ -201,14 +255,10 @@ span{
 }
 
 .proyecto{
-      background-color: #F1F1F1;
+      background-color: white;
       height: 400px;
       width: 100%;
       margin-top: -2%;
-}
-
-.proyecto:nth-child(even){
-      background-color: white;
 }
 
 .contenedor_proyecto{
