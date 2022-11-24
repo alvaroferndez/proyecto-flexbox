@@ -6,6 +6,18 @@ h2{
       font-family: 'Nunito', sans-serif;
 }
 
+/*z-index*/
+.linea-flecha, .linea-flecha-reves{
+      z-index: 49;
+}
+
+#flecha{
+      z-index: 39;
+}
+#circulo{
+      z-index: 9;
+}
+
 /*body*/
 body{
       width: 100vw;
@@ -107,13 +119,24 @@ main{
 
 /*aside*/
 #contenedor-aside{
-      width: 5vw;
+      width: 10vw;
       height: 100vh;
       position: fixed;
 }
 
+/*aside contenido*/
+#aside-global{
+      position: absolute;
+      opacity: 0;
+      width: 15vw;
+      height: 100vh;
+      background-color: #ffd52f;
+      transition: all 1s ease-in-out;
+}
+
 /*flecha aside*/
 #flecha{
+      float: right;
       clip-path: circle();
       width: 5vh;
       height: 10vh;
@@ -134,11 +157,18 @@ main{
 
 /*linea flecha*/
 .linea-flecha{
-      z-index: 9;
       width: 16px;
       height: 5px;
       margin-left: 20%;
       background-color: black;
+      transition: all 1s;
+}
+
+.linea-flecha-reves{
+      width: 16px;
+      height: 5px;
+      background-color: black;
+      transition: all 1s;
 }
 
 .linea-flecha:nth-child(1){
@@ -151,15 +181,14 @@ main{
       transform: rotate(-40deg);
 }
 
+.linea-flecha-reves:nth-child(1){
+      margin-bottom: 3px;
+      transform: rotate(490deg);
+}
 
-/*aside contenido*/
-#aside-global{
-      position: absolute;
-      visibility: hidden;
-      width: 5vw;
-      height: 100vh;
-      z-index: 19;
-      background-color: black;
+.linea-flecha-reves:nth-child(2){
+      margin-bottom: 3px;
+      transform: rotate(-490deg);
 }
 
 /*seciones*/
