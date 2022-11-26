@@ -61,12 +61,26 @@ function abrirMenu(){
 
 }
 
-function manejoSecciones(e,i){      
+function manejoSecciones(e,i){   
+      img = document.getElementById("img-sobre-mi");
+      div = document.getElementById("contenedor-info-sobre-mi");
+
+      img_ani = document.getElementById("img-sobre-mi-ani");
+      div_ani = document.getElementById("contenedor-info-sobre-mi-ani");
+      
       if (e.target.alt == secciones[i].id){
             for (seccion of secciones){
                   seccion.style.display = "none";
+                  if(img_ani != null){
+                        img_ani.id = "img-sobre-mi";
+                        div_ani.id = "contenedor-info-sobre-mi";
+                  }
             }
             secciones[i].style.display = "block";
+            if(secciones[i].id == "sobre_mi"){
+                  img.id = "img-sobre-mi-ani";
+                  div.id = "contenedor-info-sobre-mi-ani";
+            }
       }
       menu.style.backgroundColor = "white";
 }
