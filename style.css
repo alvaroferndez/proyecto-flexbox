@@ -257,7 +257,12 @@ a:visited{
 
 /*home*/
 #home{
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+#contenedor-home{
       height: 90%;
       width: 90%;
       background-image: url(./home/plantilla.png);
@@ -714,8 +719,12 @@ input:invalid{
       color: rgb(179, 79, 79);
 }
 
-
+/*tablets*/
 @media (min-width: 610px) {
+      /*logo*/
+      #logo{
+            height: 12%;
+      }
 
       /*proyectos*/
       #contenedor-proyectos{
@@ -743,12 +752,17 @@ input:invalid{
 
 }
 
+/*ordenador*/
 @media (min-width: 900px) {
-      /*logo*/
-      #logo{
-            height: 20%;
+      /*aside*/
+      #contenedor-aside{
+            width: 5vw;
       }
 
+      /*logo*/
+      #logo{
+            height: 25%;
+      }
 
       /*proyectos*/
       #contenedor-proyectos{
@@ -819,4 +833,26 @@ input:invalid{
             width: 30%;
       }
 
+}
+
+/*media para el home*/
+@media (min-width: 500px) {
+      /*home*/
+      #contenedor-home{
+            height: 792px;
+            width: 450px;
+            background-image: url(./home/plantilla.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: calc((50vh - 450px)/2);
+      }
+
+      #contenedor-github{
+            margin-top: 35%;
+      }
+
+      #desarrollador-web{
+            margin-top: 10%;
+            margin-left: none;
+      }
 }

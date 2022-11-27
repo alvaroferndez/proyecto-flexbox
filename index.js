@@ -102,7 +102,7 @@ function abrirAside(){
             aside_global.style.opacity = "0";
             flecha.style.backgroundColor = "rgba(193, 193, 193, 0.411)";
             contenedor_aside.style.zIndex = "0";
-            contenedor_aside.style.width = "10vw";
+            contenedor_aside.style.width = "5vw";
             lineas = document.getElementsByClassName("linea-flecha-reves");
             for(let i=0; i<2; i++){
                   lineas[0].className = "linea-flecha";
