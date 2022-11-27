@@ -11,6 +11,7 @@
       --50:rgb(255, 230, 0);
       --75:green;
       --100:rgb(34, 255, 0);
+      --principal: #ffd52f;
 }
 
 
@@ -27,7 +28,7 @@ h5{
       font-family: 'Syne Mono', monospace;
 }
 
-span, p{
+span, p, label, input{
       font-family: 'Exo 2', sans-serif;
 }
 
@@ -70,7 +71,7 @@ nav{
       justify-content: center;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(#ffd52f,#FFCC03);
+      background-color: var(--principal);
       visibility: hidden;
 }
 
@@ -159,7 +160,7 @@ main{
       opacity: 0;
       width: 15vw;
       height: 100%;
-      background-color: #ffd52f;
+      background-color: var(--principal);
       transition: all 1s ease-in-out;
 }
 
@@ -170,6 +171,15 @@ main{
       bottom: 0;
       display: flex;
       flex-direction: column;
+}
+
+a{
+      color: black;
+      text-decoration: none;
+}
+
+a:visited{
+      color: black;
 }
 
 /*flecha aside*/
@@ -263,8 +273,8 @@ main{
 }
 
 #nombre_apelli_cont{
-      margin-top: 22px;
-      margin-left: 90px;
+      margin-top: 7%;
+      margin-left: 32%;
       display: flex;
       flex-direction: column;
       width: 100%;
@@ -291,7 +301,7 @@ main{
       width: 50%;
       border-radius: 10px;
       font-size: 20px;
-      margin-left: 20px;
+      margin-left: 10%;
 }
 
 /*github*/
@@ -305,7 +315,6 @@ main{
 }
 
 #github{
-      color:rgb(40, 44, 71);
       margin-left: 8%;
       font-size: 17px;
       font-weight:900;
@@ -313,7 +322,8 @@ main{
 
 
 /*proyectos*/
-#proyectos{
+#contenedor-proyectos{
+      display: flex;
       flex-direction: column;
       text-align: center;
 
@@ -341,7 +351,7 @@ main{
       justify-content: center;
       width: 90%;
       margin-left: calc((100vw - 90%)/2);
-      margin-top: calc((100vh - 100%)/3);
+      margin-top: 25%;
 }
 
 #contenedor-info-sobre-mi,#contenedor-info-sobre-mi-ani{
@@ -390,22 +400,30 @@ main{
 .contenedor-servicio{
       margin: 10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: start;
       width: 100%;
-      height: calc(91vh/3);
+      height: calc(91%/3);
 }
+
 
 .contenedor-servicio-info{
       width: 50%;
+      height: 50%;
 }
 
 .img-servicio{
       width: 40%;
-      height: 100%;
+      height: 500%;
 }
 
 /*habilidades*/
+#contenedor-habilidades{
+      display: flex;
+      flex-direction: column;
+}
+
 .contenedor-skills{
       height: calc(100vh/6);
       width: 100%;
@@ -430,7 +448,6 @@ main{
 
 .skills__design--progress__1{
       position: absolute;
-      width: 30px;
       height: 20px;
       border-radius: 30px;
       background-color: green;
@@ -531,4 +548,275 @@ main{
             width: 35%;
             background-color: var(--50);
         }
+}
+
+/*testimonios*/
+.contenedor-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.contenedor-cards .card {
+      position: relative;
+      cursor: pointer;
+}
+
+.contenedor-cards .card .parte {
+      width: 300px;
+      height: 200px;
+      transition: 0.5s;
+}
+
+.contenedor-cards .card .parte.parte1 {
+      position: relative;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      transform: translateY(100px);
+}
+
+.contenedor-cards .card:hover .parte.parte1 {
+      background: #ff0057;
+      transform: translateY(0);
+}
+
+.contenedor-cards .card .parte.parte1 .contenido {
+      opacity: 0.5;
+      transition: 0.5s;
+}
+
+.contenedor-cards .card:hover .parte.parte1 .contenido {
+      opacity: 1;
+}
+
+.contenedor-cards .card .parte.parte1 .contenido img {
+      max-width: 100px;
+}
+
+.contenedor-cards .card .parte.parte1 .contenido{
+      margin: 10px 0 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      font-size: 1.5em;
+}
+
+.contenedor-cards .card .parte.parte2 {
+      position: relative;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      transform: translateY(-100px);
+}
+
+.contenedor-cards .card:hover .parte.parte2 {
+      transform: translateY(0);
+}
+
+.contenedor-cards .card .parte.parte2 .contenido p {
+      margin: 0;
+      padding: 0;
+}
+
+.contenedor-cards .card .parte.parte2 .contenido{
+      margin: 15px 0 0;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 900;
+      color: #333;
+      padding: 5px;
+}
+
+.contenedor-cards .card .parte.parte2 .contenido{
+      background: white;
+      color: #333;
+}
+
+/*contacto*/
+
+#formulario{
+      width: 90vw;
+      height: 90vh;
+      margin-left: 5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+}
+
+/*imagen contacto*/
+#imagen-contacto{
+      width: 50%;
+      height: 30%;
+}
+
+/*formulario*/
+.info-formulario{
+      height: 50%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+#contenedor-info{
+      width: 50%;
+      height: 70%;
+}
+
+/*inputs*/
+input{
+      border: none;
+      border-bottom: 1px solid #000000;
+      outline: none;    
+}
+
+input:valid{
+      border-bottom: 1px solid rgb(0, 181, 0);
+}
+
+input:invalid{
+     border-bottom: 1px solid rgb(233, 0, 0);
+}
+
+/*boton*/
+#enviar{
+      width: 50%;
+      height: 10%;
+      border: 2px solid #422800;
+      border-radius: 30px;
+      box-shadow: #422800 4px 4px 0 0;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 50px;
+      text-align: center;
+      user-select: none;
+      touch-action: manipulation;
+      background-color: #fff;
+      box-shadow: #422800 2px 2px 0 0;
+      transform: translate(2px, 2px);
+}
+
+#enviar:hover{
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .4);
+      color: rgb(179, 79, 79);
+}
+
+
+@media (min-width: 610px) {
+
+      /*proyectos*/
+      #contenedor-proyectos{
+            flex-direction: row;
+            flex-wrap: wrap;
+      }
+
+      .proyecto{
+            width: 50%;
+      }
+
+      /*servicios*/
+      .contenedor-servicio{
+            flex-direction: row;
+      }
+
+      .servicio:nth-child(even)>.contenedor-servicio{
+            flex-direction: row-reverse;
+      }
+
+      /*contacto*/
+      #imagen-contacto{
+            height: 50%;
+      }
+
+}
+
+@media (min-width: 900px) {
+      /*logo*/
+      #logo{
+            height: 20%;
+      }
+
+
+      /*proyectos*/
+      #contenedor-proyectos{
+            flex-direction: row;
+            flex-wrap: wrap;
+      }
+
+      .proyecto{
+            width: 50%;
+      }
+
+      /*sobre mi*/
+      #contenedor-sobre-mi{
+            margin-top: 15%;
+      }
+
+      /*servicios*/
+      #contenedor-servicios{
+            flex-direction: row;
+            flex-wrap: wrap;
+      }
+
+      .servicio{
+            width: 40%;
+            margin-top: 5%;
+      }
+
+      .servicio:nth-child(odd){
+            margin-right: 10%;
+      }
+
+      /*habilidades*/
+      #contenedor-habilidades{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+      }
+
+      .contenedor-skills{
+            height: calc(100vh/3);
+            width: 47%;
+            margin-right: 1.5%;
+      }
+
+      .skills__design--progress{
+            width: 47%;
+      }
+
+      /*testimonios*/
+      .contenedor-cards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+      }
+
+      .card{
+            margin-left: 5%;
+            margin-right: 5%;
+      }
+
+      /*contacto*/
+      #imagen-contacto{
+            height: 35%;
+            width: 30%;
+      }
+
 }

@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
 function abrirMenu(){
       lineas = document.getElementsByClassName("linea");
       if(abrir){
-            menu.style.backgroundColor = "#FFCF03";
+            menu.style.backgroundColor = "var(--principal)";
             secciones_div.style.opacity = "0.6";
             header.style.height = "15vh";
             nav.style.visibility = "visible";
